@@ -14,7 +14,6 @@ public class DocumentsPage {
 	@FindBy(xpath = "//img[@title='Create Document...']")
 	private WebElement createDocBtn;
 	
-
 	@FindBy(name = "submit")
 	private WebElement searchBtn;
 
