@@ -17,4 +17,5 @@ public class DocumentsPage {
 	public WebElement getCreateDocBtn() {
 		return createDocBtn;
 	}
+	
 }
