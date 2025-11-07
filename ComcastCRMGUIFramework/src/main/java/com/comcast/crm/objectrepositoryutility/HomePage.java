@@ -14,6 +14,9 @@ public class HomePage {
 		PageFactory.initElements(driver, this);
 	}
 
+	@FindBy(linkText = "Documents")
+	private WebElement documentsLink;
+	
 	@FindBy(linkText = "Organizations")
 	private WebElement orgLink;
 
@@ -43,6 +46,10 @@ public class HomePage {
 
 	public WebElement getOrgLink() {
 		return orgLink;
+	}
+
+	public WebElement getDocumentsLink() {
+		return documentsLink;
 	}
 
 	public WebElement getContactLink() {
