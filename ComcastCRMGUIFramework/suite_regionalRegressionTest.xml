@@ -19,7 +19,7 @@
 				</methods>
 			</class>
 			<class
-				name="com.comcast.crm.trouble_ticketstest.CreateTroubleTicket">
+				name="com.comcast.crm.trouble_ticketstest.CreateTroubleTicketTest">
 				<methods>
 					<include name="createTroubleTicketTest"></include>
 				</methods>

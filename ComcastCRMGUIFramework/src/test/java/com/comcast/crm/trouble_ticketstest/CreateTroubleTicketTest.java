@@ -23,7 +23,7 @@ import com.comcast.crm.objectrepositoryutility.TroubleTicketsInfoPage;
 import com.comcast.crm.objectrepositoryutility.TroubleTicketsPage;
 
 @Listeners(com.comcast.crm.generic.listeners.ListenersImpl.class)
-public class CreateTroubleTicket extends BaseClass {
+public class CreateTroubleTicketTest extends BaseClass {
 
 	@Test(groups = "regressionTest")
 	public void createTroubleTicketTest() throws Exception {

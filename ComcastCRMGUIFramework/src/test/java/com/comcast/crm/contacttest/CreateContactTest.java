@@ -48,7 +48,7 @@ public class CreateContactTest extends BaseClass {
 		ContactInfoPage cip = new ContactInfoPage(driver);
 		String contactInfo = cip.getHeaderInfo().getText();
 		boolean conactStatus = contactInfo.contains(lastname);
-		Assert.assertEquals(conactStatus, false);
+		Assert.assertEquals(conactStatus, true);
 		Reporter.log(  lastname+" Contact Created");
 
 

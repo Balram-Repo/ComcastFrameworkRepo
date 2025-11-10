@@ -9,10 +9,10 @@
 		<classes>
 			<class name="com.comcast.crm.contacttest.CreateContactTest" />
 			<class name="com.comcast.crm.producttest.CreateProductTest" />
-			<class name="com.comcast.crm.calendartest.CreateAnEvent" />
+			<class name="com.comcast.crm.calendartest.CreateAnEventTest" />
 			<class name="com.comcast.crm.orgtest.CreateOrganizationTest" />
 			<class
-				name="com.comcast.crm.trouble_ticketstest.CreateTroubleTicket" />
+				name="com.comcast.crm.trouble_ticketstest.CreateTroubleTicketTest" />
 		</classes>
 	</test> <!--
 	Test -->
