@@ -17,7 +17,7 @@ import com.comcast.crm.objectrepositoryutility.EventInfoPage;
 import com.comcast.crm.objectrepositoryutility.HomePage;
 
 @Listeners(com.comcast.crm.generic.listeners.ListenersImpl.class)
-public class CreateAnEvent extends BaseClass {
+public class CreateAnEventTest extends BaseClass {
 
 	@Test(groups = "smokeTest")
 	public void createACallEvent() throws Exception {

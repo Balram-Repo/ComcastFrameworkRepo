@@ -1,12 +1,13 @@
 package com.comcast.crm.orgtest;
 
 import org.testng.Assert;
-import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.aventstack.extentreports.Status;
 import com.comcast.crm.baseutility.BaseClass;
+import com.comcast.crm.generic.webdriverutility.UtilityClassObject;
 import com.comcast.crm.objectrepositoryutility.CreatingNewOrganizationPage;
 import com.comcast.crm.objectrepositoryutility.HomePage;
 import com.comcast.crm.objectrepositoryutility.OrganizationInfoPage;
@@ -27,10 +28,10 @@ public class CreateOrganizationTest extends BaseClass {
 		CreatingNewOrganizationPage cnop = new CreatingNewOrganizationPage(driver);
 		OrganizationInfoPage oip = new OrganizationInfoPage(driver);
 
-		Reporter.log( "Navigated to Home Page");
+		UtilityClassObject.getTest().log(Status.INFO, "Navigated to Home Page");
 		// 2. Click on Organization.
 		hp.getOrgLink().click();
-		Reporter.log( "Navigated to Organization Page");
+		UtilityClassObject.getTest().log(Status.INFO,  "Navigated to Organization Page");
 
 		// 3.Click on Create Organization Lookup image.
 		op.getCreateOrgBtn().click();
@@ -44,18 +45,18 @@ public class CreateOrganizationTest extends BaseClass {
 		String orgInfo = oip.getHeaderInfo().getText();
 		boolean orgStatus = orgInfo.contains(orgName);
 		Assert.assertEquals(orgStatus, true);
-		Reporter.log( orgName+" Organization Created");
+		UtilityClassObject.getTest().log(Status.INFO, orgName+" Organization Created");
 
 		String actOrgName = oip.getOrgNameInfo().getText();
 		SoftAssert sa = new SoftAssert();
 		sa.assertEquals(actOrgName.trim(), orgName);
 		sa.assertAll();
-		Reporter.log( orgName+" Info Verified");
+		UtilityClassObject.getTest().log(Status.INFO,  orgName+" Info Verified");
 
 		// 6. Update the organization Id in the Test Script Data.
 		String orgId = oip.getOrgIdInfo().getText();
 		orgId = orgId.trim();
-		Reporter.log( "OrgID: "+orgId);
+		UtilityClassObject.getTest().log(Status.INFO,  "OrgID: "+orgId);
 
 		// Write back to excel file
 		eUtil.setDataToExcel("Org", 1, 4, orgId);
@@ -73,10 +74,10 @@ public class CreateOrganizationTest extends BaseClass {
 		CreatingNewOrganizationPage cnop = new CreatingNewOrganizationPage(driver);
 		OrganizationInfoPage oip = new OrganizationInfoPage(driver);
 
-		Reporter.log( "Navigated to Home Page");
+		UtilityClassObject.getTest().log(Status.INFO,  "Navigated to Home Page");
 		// 2. Click on Organization.
 		hp.getOrgLink().click();
-		Reporter.log( "Navigated to Organization Page");
+		UtilityClassObject.getTest().log(Status.INFO,  "Navigated to Organization Page");
 
 		// 3.Click on Create Organization Lookup image.
 		op.getCreateOrgBtn().click();
@@ -91,24 +92,24 @@ public class CreateOrganizationTest extends BaseClass {
 		String orgInfo = oip.getHeaderInfo().getText();
 		boolean orgStatus = orgInfo.contains(orgName);
 		Assert.assertEquals(orgStatus, true);
-		Reporter.log( orgName+" Organization Created");
+		UtilityClassObject.getTest().log(Status.INFO,  orgName+" Organization Created");
 
 		
 		String actOrgName = oip.getOrgNameInfo().getText();
 		SoftAssert sa = new SoftAssert();
 		sa.assertEquals(actOrgName.trim(), orgName);
 		sa.assertAll();
-		Reporter.log( orgName+" Info Verified");
+		UtilityClassObject.getTest().log(Status.INFO,  orgName+" Info Verified");
 
 		String actIndustryName = oip.getIndustryNameInfo().getText();
 		sa.assertEquals(actIndustryName, industryName);
 		sa.assertAll();
-		Reporter.log( industryName+" Info Verified");
+		UtilityClassObject.getTest().log(Status.INFO, industryName+" Info Verified");
 
 		// 6. Update the organization Id in the Test Script Data.
 		String orgId = oip.getOrgIdInfo().getText();
 		orgId = orgId.trim();
-		Reporter.log( "OrgID: "+orgId);
+		UtilityClassObject.getTest().log(Status.INFO,  "OrgID: "+orgId);
 
 		// Write back to excel file
 		eUtil.setDataToExcel("Org", 4, 4, orgId);
@@ -127,10 +128,10 @@ public class CreateOrganizationTest extends BaseClass {
 		CreatingNewOrganizationPage cnop = new CreatingNewOrganizationPage(driver);
 		OrganizationInfoPage oip = new OrganizationInfoPage(driver);
 
-		Reporter.log( "Navigated to Home Page");
+		UtilityClassObject.getTest().log(Status.INFO, "Navigated to Home Page");
 		// 2. Click on Organization.
 		hp.getOrgLink().click();
-		Reporter.log( "Navigated to Organization Page");
+		UtilityClassObject.getTest().log(Status.INFO, "Navigated to Organization Page");
 
 		// 3.Click on Create Organization Lookup image.
 		op.getCreateOrgBtn().click();
@@ -145,23 +146,23 @@ public class CreateOrganizationTest extends BaseClass {
 		String orgInfo = oip.getHeaderInfo().getText();
 		boolean orgStatus = orgInfo.contains(orgName);
 		Assert.assertEquals(orgStatus, true);
-		Reporter.log( orgName+" Organization Created");
+		UtilityClassObject.getTest().log(Status.INFO, orgName+" Organization Created");
 
 		String actOrgName = oip.getOrgNameInfo().getText();
 		SoftAssert sa = new SoftAssert();
 		sa.assertEquals(actOrgName.trim(), orgName);
 		sa.assertAll();
-		Reporter.log( orgName+" Info Verified");
+		UtilityClassObject.getTest().log(Status.INFO,  orgName+" Info Verified");
 
 		String actTypeName = oip.getTypeInfo().getText();
 		sa.assertEquals(actTypeName, typeName);
 		sa.assertAll();
-		Reporter.log( typeName+" Info VErified");
+		UtilityClassObject.getTest().log(Status.INFO,  typeName+" Info VErified");
 
 		// 6. Update the organization Id in the Test Script Data.
 		String orgId = oip.getOrgIdInfo().getText();
 		orgId = orgId.trim();
-		Reporter.log( "OrgID: "+orgId);
+		UtilityClassObject.getTest().log(Status.INFO,  "OrgID: "+orgId);
 
 		// Write back to excel file
 		eUtil.setDataToExcel("Org", 7, 4, orgId);

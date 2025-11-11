@@ -9,7 +9,6 @@
 		<classes>
 			<class name="com.comcast.crm.contacttest.CreateContactTest">
 				<methods>
-					<include name="createContactTest"></include>
 					<include name="createContactWithOrgTest"></include>
 				</methods>
 			</class>
@@ -18,12 +17,7 @@
 					<include name="createOrganizationTest"></include>
 				</methods>
 			</class>
-			<class
-				name="com.comcast.crm.trouble_ticketstest.CreateTroubleTicket">
-				<methods>
-					<include name="createTroubleTicketTest"></include>
-				</methods>
-			</class>
+			
 		</classes>
 	</test> <!--
 	Test -->

@@ -2,12 +2,13 @@ package com.comcast.crm.contacttest;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
-import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.aventstack.extentreports.Status;
 import com.comcast.crm.baseutility.BaseClass;
+import com.comcast.crm.generic.webdriverutility.UtilityClassObject;
 import com.comcast.crm.objectrepositoryutility.ContactInfoPage;
 import com.comcast.crm.objectrepositoryutility.ContactsPage;
 import com.comcast.crm.objectrepositoryutility.CreatingNewContactPage;
@@ -27,16 +28,16 @@ public class CreateContactTest extends BaseClass {
 		// Get data from Excel file
 		String lastname = eUtil.getDataFromExcelFile("Contacts", 1, 1) + jUtil.getRandomNumber();
 
-		Reporter.log(  "Navigated to Home Page");
+		UtilityClassObject.getTest().log(Status.INFO,   "Navigated to Home Page");
 		// 2. Click on Contacts.
 		HomePage hp = new HomePage(driver);
 		hp.getContactLink().click();
-		Reporter.log(  "Navigated to Contact Page");
+		UtilityClassObject.getTest().log(Status.INFO,   "Navigated to Contact Page");
 
 		// 3.Click on Create Contact Lookup image.
 		ContactsPage cp = new ContactsPage(driver);
 		cp.getCreateContactBtn().click();
-		Reporter.log(  "Creating a New Contact");
+		UtilityClassObject.getTest().log(Status.INFO,   "Creating a New Contact");
 
 		// 4. Enter all the mandatory fields and click on Save button.
 		CreatingNewContactPage cncp = new CreatingNewContactPage(driver);
@@ -48,20 +49,20 @@ public class CreateContactTest extends BaseClass {
 		ContactInfoPage cip = new ContactInfoPage(driver);
 		String contactInfo = cip.getHeaderInfo().getText();
 		boolean conactStatus = contactInfo.contains(lastname);
-		Assert.assertEquals(conactStatus, false);
-		Reporter.log(  lastname+" Contact Created");
+		Assert.assertEquals(conactStatus, true);
+		UtilityClassObject.getTest().log(Status.INFO,   lastname+" Contact Created");
 
 
 		String actLastname = cip.getLastnameInfo().getText();
 		SoftAssert sa = new SoftAssert();
 		sa.assertEquals(actLastname.trim(), lastname);
 		sa.assertAll();
-		Reporter.log(  lastname+" Info Verified");
+		UtilityClassObject.getTest().log(Status.INFO,   lastname+" Info Verified");
 
 		// 6. Update the contact Id in the Test Script Data.
 		String contactId = cip.getContactIdInfo().getText();
 		contactId = contactId.trim();
-		Reporter.log(contactId, true);
+		UtilityClassObject.getTest().log(Status.INFO, contactId);
 
 		// Write back to Excel File
 		eUtil.setDataToExcel("Contacts", 1, 4, contactId);
@@ -89,10 +90,10 @@ public class CreateContactTest extends BaseClass {
 		SelectOrganizationPage sop = new SelectOrganizationPage(driver);
 		ContactInfoPage cip = new ContactInfoPage(driver);
 
-		Reporter.log(  "Navigated to Home Page");
+		UtilityClassObject.getTest().log(Status.INFO,   "Navigated to Home Page");
 		// Create an Organization
 		hp.getOrgLink().click();
-		Reporter.log(  "Navigated to Organization Page");
+		UtilityClassObject.getTest().log(Status.INFO,   "Navigated to Organization Page");
 		op.getCreateOrgBtn().click();
 		cnop.getOrgName().sendKeys(orgName);
 		cnop.getSaveBtn().click();
@@ -100,11 +101,11 @@ public class CreateContactTest extends BaseClass {
 		String orgInfo = oip.getHeaderInfo().getText();
 		boolean orgStatus = orgInfo.contains(orgName);
 		Assert.assertEquals(orgStatus, true);
-		Reporter.log(  orgName+" Organization Created");
+		UtilityClassObject.getTest().log(Status.INFO,   orgName+" Organization Created");
 
 		// 2. Click on Contacts.
 		hp.getContactLink().click();
-		Reporter.log(  "Navigated to Contact Page");
+		UtilityClassObject.getTest().log(Status.INFO,   "Navigated to Contact Page");
 
 		// 3.Click on Create Contact Lookup image.
 		cp.getCreateContactBtn().click();
@@ -130,13 +131,13 @@ public class CreateContactTest extends BaseClass {
 		String contactInfo = cip.getHeaderInfo().getText();
 		boolean conactStatus = contactInfo.contains(lastname);
 		Assert.assertEquals(conactStatus, true);
-		Reporter.log(  lastname+" Contact Created");
+		UtilityClassObject.getTest().log(Status.INFO,   lastname+" Contact Created");
 
 		String actLastname = cip.getLastnameInfo().getText();
 		SoftAssert sa = new SoftAssert();
 		sa.assertEquals(actLastname.trim(), lastname);
 		sa.assertAll();
-		Reporter.log(  lastname+" Info Verified");
+		UtilityClassObject.getTest().log(Status.INFO,   lastname+" Info Verified");
 
 		String actOrgName = cip.getOrgNameInfo().getText();
 		sa.assertEquals(actOrgName.trim(), orgName);
@@ -145,7 +146,7 @@ public class CreateContactTest extends BaseClass {
 		// 6. Update the contact Id in the Test Script Data.
 		String contactId = cip.getContactIdInfo().getText();
 		contactId = contactId.trim();
-		Reporter.log(  "Contact ID: "+contactId);
+		UtilityClassObject.getTest().log(Status.INFO,   "Contact ID: "+contactId);
 
 		// Write back to Excel File
 		eUtil.setDataToExcel("Contacts", 7, 4, contactId);
@@ -164,10 +165,10 @@ public class CreateContactTest extends BaseClass {
 		CreatingNewContactPage cncp = new CreatingNewContactPage(driver);
 		ContactInfoPage cip = new ContactInfoPage(driver);
 
-		Reporter.log(  "Navigated to Home Page");
+		UtilityClassObject.getTest().log(Status.INFO,   "Navigated to Home Page");
 		// 2. Click on Contacts.
 		hp.getContactLink().click();
-		Reporter.log(  "Navigated to Contact Page");
+		UtilityClassObject.getTest().log(Status.INFO,   "Navigated to Contact Page");
 
 		// 3.Click on Create Contact Lookup image.
 		cp.getCreateContactBtn().click();
@@ -181,18 +182,18 @@ public class CreateContactTest extends BaseClass {
 		String contactInfo = cip.getHeaderInfo().getText();
 		boolean conactStatus = contactInfo.contains(lastname);
 		Assert.assertEquals(conactStatus, true);
-		Reporter.log(  lastname+" Contact Created");
+		UtilityClassObject.getTest().log(Status.INFO,   lastname+" Contact Created");
 
 		String actLastname = cip.getLastnameInfo().getText();
 		SoftAssert sa = new SoftAssert();
 		sa.assertEquals(actLastname.trim(), lastname);
 		sa.assertAll();
-		Reporter.log(  lastname+" Info Verified");
+		UtilityClassObject.getTest().log(Status.INFO,   lastname+" Info Verified");
 
 		String actMobile = cip.getMobileInfo().getText();
 		sa.assertEquals(actMobile.trim(), mobile);
 		sa.assertAll();
-		Reporter.log(  mobile+ "Info Verified");
+		UtilityClassObject.getTest().log(Status.INFO,   mobile+ "Info Verified");
 
 		// 6. Update the contact Id in the Test Script Data.
 		String contactId = cip.getContactIdInfo().getText();

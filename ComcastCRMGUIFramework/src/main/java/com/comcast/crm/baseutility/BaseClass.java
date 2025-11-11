@@ -17,6 +17,7 @@ import com.comcast.crm.generic.databaseutility.DatabaseUtility;
 import com.comcast.crm.generic.fileutility.ExcelFileUtility;
 import com.comcast.crm.generic.fileutility.PropertiesFileUtility;
 import com.comcast.crm.generic.webdriverutility.JavaUtility;
+import com.comcast.crm.generic.webdriverutility.UtilityClassObject;
 import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
 import com.comcast.crm.objectrepositoryutility.HomePage;
 import com.comcast.crm.objectrepositoryutility.LoginPage;
@@ -41,7 +42,8 @@ public class BaseClass {
 	@BeforeClass(alwaysRun = true)
 	public void beforeClassConfig(@Optional("chrome") String browser) throws Exception {
 		System.out.println("=== Launch Browser ===");
-		String BROWSER = browser;
+		String BROWSER = System.getProperty("browser", pUtil.getDataFromPropertyFile("browser"));
+				// browser;
 				// pUtil.getDataFromPropertyFile("browser");
 		switch (BROWSER) {
 		case "chrome":
@@ -60,16 +62,17 @@ public class BaseClass {
 			driver = new ChromeDriver();
 			break;
 		}
-		sDriver = driver;
+//		sDriver = driver;
+		UtilityClassObject.setDriver(driver);
 
 	}
 
 	@BeforeMethod(alwaysRun = true)
 	public void beforeMethodConfig() throws Exception {
 		System.out.println("=== Login to Applocation ===");
-		String URL = pUtil.getDataFromPropertyFile("url");
-		String USERNAME = pUtil.getDataFromPropertyFile("username");
-		String PASSWORD = pUtil.getDataFromPropertyFile("password");
+		String URL = System.getProperty("url", pUtil.getDataFromPropertyFile("url"));
+		String USERNAME = System.getProperty("username", pUtil.getDataFromPropertyFile("username"));
+		String PASSWORD = System.getProperty("password", pUtil.getDataFromPropertyFile("password"));
 		LoginPage lp = new LoginPage(driver);
 		lp.loginToApp(URL, USERNAME, PASSWORD);
 	}

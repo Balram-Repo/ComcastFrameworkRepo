@@ -23,7 +23,7 @@ import com.comcast.crm.objectrepositoryutility.TroubleTicketsInfoPage;
 import com.comcast.crm.objectrepositoryutility.TroubleTicketsPage;
 
 @Listeners(com.comcast.crm.generic.listeners.ListenersImpl.class)
-public class CreateTroubleTicket extends BaseClass {
+public class CreateTroubleTicketTest extends BaseClass {
 
 	@Test(groups = "regressionTest")
 	public void createTroubleTicketTest() throws Exception {
@@ -67,12 +67,13 @@ public class CreateTroubleTicket extends BaseClass {
 		String prodInfo = pip.getHeaderInfo().getText();
 		boolean productStatus = prodInfo.contains(prodName);
 		Assert.assertTrue(productStatus);
-		UtilityClassObject.getTest().log(Status.INFO, "Contact Created");
+		UtilityClassObject.getTest().log(Status.INFO, "Product Created");
 
 		// Create Trouble Ticket
 		hp.getTrouble_TicketLink().click();
 		ttp.getCreateTicketBtn().click();
 		cntp.getTitleEdt().sendKeys(ticket_title);
+		UtilityClassObject.getTest().log(Status.INFO, "Title Selected");
 
 		cntp.getSelectContactImg().click();
 		// Switch driver control to Contacts Page
@@ -90,13 +91,13 @@ public class CreateTroubleTicket extends BaseClass {
 		spp.getSearchEdt().sendKeys(prodName);
 		spp.getSearchBtn().click();
 		driver.findElement(By.linkText(prodName)).click();
-		System.out.println("Product Selected");
+		UtilityClassObject.getTest().log(Status.INFO, "Product Selected");
 
 		// Switch back driver control
 		wUtil.toSwitchWindowWithURL(driver, "module=HelpDesk");
 
 		wUtil.toSelect(cntp.getStatusDD(), statusWFR);
-		System.out.println("Status Selected");
+		UtilityClassObject.getTest().log(Status.INFO, "Status Selected");
 
 		cntp.getSaveBtn().click();
 
