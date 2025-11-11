@@ -12,7 +12,6 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import com.comcast.crm.baseutility.BaseClass;
 import com.comcast.crm.generic.webdriverutility.JavaUtility;
 import com.comcast.crm.generic.webdriverutility.UtilityClassObject;
 
@@ -61,7 +60,7 @@ public class ListenersImpl implements ITestListener, ISuiteListener {
 	public void onTestFailure(ITestResult result) {
 		String methodName = result.getMethod().getMethodName();
 		JavaUtility jUtil = new JavaUtility();
-		TakesScreenshot ts = (TakesScreenshot) BaseClass.sDriver;
+		TakesScreenshot ts = (TakesScreenshot) UtilityClassObject.getDriver();
 		String filePath = ts.getScreenshotAs(OutputType.BASE64);
 		test.addScreenCaptureFromBase64String(filePath, methodName + jUtil.getSystemDateAndTime());
 		test.log(Status.FAIL, methodName + "----Failed");

@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-10T15:27:15 IST" name="Default suite" finished-at="2025-11-10T15:27:34 IST" duration-ms="19675">
+  <suite started-at="2025-11-11T14:41:38 IST" name="Suite" finished-at="2025-11-11T14:42:00 IST" duration-ms="22418">
     <groups>
       <group name="regressionTest">
-        <method signature="CreateTroubleTicket.createTroubleTicketTest()[pri:0, instance:com.comcast.crm.trouble_ticketstest.CreateTroubleTicket@3c41ed1d]" name="createTroubleTicketTest" class="com.comcast.crm.trouble_ticketstest.CreateTroubleTicket"/>
+        <method signature="CreateContactTest.createContactWithOrgTest()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@327514f]" name="createContactWithOrgTest" class="com.comcast.crm.contacttest.CreateContactTest"/>
       </group> <!-- regressionTest -->
+      <group name="smokeTest">
+        <method signature="CreateOrganizationTest.createOrganizationTest()[pri:0, instance:com.comcast.crm.orgtest.CreateOrganizationTest@815b41f]" name="createOrganizationTest" class="com.comcast.crm.orgtest.CreateOrganizationTest"/>
+      </group> <!-- smokeTest -->
     </groups>
-    <test started-at="2025-11-10T15:27:15 IST" name="Default test" finished-at="2025-11-10T15:27:34 IST" duration-ms="19675">
-      <class name="com.comcast.crm.trouble_ticketstest.CreateTroubleTicket">
-        <test-method is-config="true" signature="beforeSuiteConfig()[pri:0, instance:com.comcast.crm.trouble_ticketstest.CreateTroubleTicket@3c41ed1d]" started-at="2025-11-10T15:27:14 IST" name="beforeSuiteConfig" finished-at="2025-11-10T15:27:15 IST" duration-ms="597" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuiteConfig -->
-        <test-method is-config="true" signature="beforeClassConfig(java.lang.String)[pri:0, instance:com.comcast.crm.trouble_ticketstest.CreateTroubleTicket@3c41ed1d]" started-at="2025-11-10T15:27:15 IST" name="beforeClassConfig" finished-at="2025-11-10T15:27:16 IST" duration-ms="1186" status="PASS">
+    <test started-at="2025-11-11T14:41:38 IST" name="Test" finished-at="2025-11-11T14:42:00 IST" duration-ms="22418">
+      <class name="com.comcast.crm.orgtest.CreateOrganizationTest">
+        <test-method is-config="true" signature="beforeClassConfig(java.lang.String)[pri:0, instance:com.comcast.crm.orgtest.CreateOrganizationTest@815b41f]" started-at="2025-11-11T14:41:52 IST" name="beforeClassConfig" finished-at="2025-11-11T14:41:53 IST" duration-ms="878" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -25,27 +24,60 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClassConfig -->
-        <test-method is-config="true" signature="beforeMethodConfig()[pri:0, instance:com.comcast.crm.trouble_ticketstest.CreateTroubleTicket@3c41ed1d]" started-at="2025-11-10T15:27:16 IST" name="beforeMethodConfig" finished-at="2025-11-10T15:27:17 IST" duration-ms="588" status="PASS">
+        <test-method is-config="true" signature="beforeMethodConfig()[pri:0, instance:com.comcast.crm.orgtest.CreateOrganizationTest@815b41f]" started-at="2025-11-11T14:41:53 IST" name="beforeMethodConfig" finished-at="2025-11-11T14:41:55 IST" duration-ms="1557" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethodConfig -->
-        <test-method signature="createTroubleTicketTest()[pri:0, instance:com.comcast.crm.trouble_ticketstest.CreateTroubleTicket@3c41ed1d]" started-at="2025-11-10T15:27:17 IST" name="createTroubleTicketTest" finished-at="2025-11-10T15:27:33 IST" duration-ms="16731" status="PASS">
+        <test-method signature="createOrganizationTest()[pri:0, instance:com.comcast.crm.orgtest.CreateOrganizationTest@815b41f]" started-at="2025-11-11T14:41:55 IST" name="createOrganizationTest" finished-at="2025-11-11T14:41:59 IST" duration-ms="4736" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createTroubleTicketTest -->
-        <test-method is-config="true" signature="afterMethodCongig()[pri:0, instance:com.comcast.crm.trouble_ticketstest.CreateTroubleTicket@3c41ed1d]" started-at="2025-11-10T15:27:33 IST" name="afterMethodCongig" finished-at="2025-11-10T15:27:34 IST" duration-ms="729" status="PASS">
+        </test-method> <!-- createOrganizationTest -->
+        <test-method is-config="true" signature="afterMethodCongig()[pri:0, instance:com.comcast.crm.orgtest.CreateOrganizationTest@815b41f]" started-at="2025-11-11T14:41:59 IST" name="afterMethodCongig" finished-at="2025-11-11T14:42:00 IST" duration-ms="734" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethodCongig -->
-        <test-method is-config="true" signature="afterClassConfig()[pri:0, instance:com.comcast.crm.trouble_ticketstest.CreateTroubleTicket@3c41ed1d]" started-at="2025-11-10T15:27:34 IST" name="afterClassConfig" finished-at="2025-11-10T15:27:34 IST" duration-ms="394" status="PASS">
+        <test-method is-config="true" signature="afterClassConfig()[pri:0, instance:com.comcast.crm.orgtest.CreateOrganizationTest@815b41f]" started-at="2025-11-11T14:42:00 IST" name="afterClassConfig" finished-at="2025-11-11T14:42:00 IST" duration-ms="213" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClassConfig -->
-        <test-method is-config="true" signature="afterSuiteConfig()[pri:0, instance:com.comcast.crm.trouble_ticketstest.CreateTroubleTicket@3c41ed1d]" started-at="2025-11-10T15:27:34 IST" name="afterSuiteConfig" finished-at="2025-11-10T15:27:34 IST" duration-ms="0" status="PASS">
+      </class> <!-- com.comcast.crm.orgtest.CreateOrganizationTest -->
+      <class name="com.comcast.crm.contacttest.CreateContactTest">
+        <test-method is-config="true" signature="beforeSuiteConfig()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@327514f]" started-at="2025-11-11T14:41:37 IST" name="beforeSuiteConfig" finished-at="2025-11-11T14:41:38 IST" duration-ms="783" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuiteConfig -->
+        <test-method is-config="true" signature="beforeClassConfig(java.lang.String)[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@327514f]" started-at="2025-11-11T14:41:38 IST" name="beforeClassConfig" finished-at="2025-11-11T14:41:39 IST" duration-ms="1384" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClassConfig -->
+        <test-method is-config="true" signature="beforeMethodConfig()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@327514f]" started-at="2025-11-11T14:41:39 IST" name="beforeMethodConfig" finished-at="2025-11-11T14:41:40 IST" duration-ms="673" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethodConfig -->
+        <test-method signature="createContactWithOrgTest()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@327514f]" started-at="2025-11-11T14:41:40 IST" name="createContactWithOrgTest" finished-at="2025-11-11T14:41:51 IST" duration-ms="11027" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContactWithOrgTest -->
+        <test-method is-config="true" signature="afterMethodCongig()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@327514f]" started-at="2025-11-11T14:41:51 IST" name="afterMethodCongig" finished-at="2025-11-11T14:41:52 IST" duration-ms="802" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethodCongig -->
+        <test-method is-config="true" signature="afterClassConfig()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@327514f]" started-at="2025-11-11T14:41:52 IST" name="afterClassConfig" finished-at="2025-11-11T14:41:52 IST" duration-ms="322" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClassConfig -->
+        <test-method is-config="true" signature="afterSuiteConfig()[pri:0, instance:com.comcast.crm.contacttest.CreateContactTest@327514f]" started-at="2025-11-11T14:42:00 IST" name="afterSuiteConfig" finished-at="2025-11-11T14:42:00 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuiteConfig -->
-      </class> <!-- com.comcast.crm.trouble_ticketstest.CreateTroubleTicket -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.comcast.crm.contacttest.CreateContactTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
