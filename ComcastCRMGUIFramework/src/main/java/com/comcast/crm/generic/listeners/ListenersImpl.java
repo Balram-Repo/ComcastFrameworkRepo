@@ -17,7 +17,7 @@ import com.comcast.crm.generic.webdriverutility.UtilityClassObject;
 
 public class ListenersImpl implements ITestListener, ISuiteListener {
 
-	public ExtentReports report;
+	public static ExtentReports report;
 	public static ExtentTest test;
 
 	@Override

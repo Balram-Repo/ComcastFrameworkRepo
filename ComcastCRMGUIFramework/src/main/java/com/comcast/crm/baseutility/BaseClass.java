@@ -62,7 +62,7 @@ public class BaseClass {
 			driver = new ChromeDriver();
 			break;
 		}
-//		sDriver = driver;
+		sDriver = driver;
 		UtilityClassObject.setDriver(driver);
 
 	}
