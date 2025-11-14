@@ -11,13 +11,29 @@
         <methods>
           <include name="afterSuiteConfig"/>
           <include name="beforeMethodConfig"/>
-          <include name="afterClassConfig"/>
           <include name="afterMethodCongig"/>
+          <include name="afterClassConfig"/>
           <include name="beforeClassConfig"/>
-          <include name="createProductTest"/>
           <include name="beforeSuiteConfig"/>
+          <include name="createProductWithVendor"/>
         </methods>
       </class> <!-- com.comcast.crm.producttest.CreateProductTest -->
     </classes>
   </test> <!-- Test-2(failed) -->
+  <test thread-count="2" parallel="tests" name="Test-1(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.comcast.crm.orgtest.CreateOrganizationTest">
+        <methods>
+          <include name="afterSuiteConfig"/>
+          <include name="beforeMethodConfig"/>
+          <include name="afterMethodCongig"/>
+          <include name="afterClassConfig"/>
+          <include name="createOrganizationTest"/>
+          <include name="beforeClassConfig"/>
+          <include name="beforeSuiteConfig"/>
+        </methods>
+      </class> <!-- com.comcast.crm.orgtest.CreateOrganizationTest -->
+    </classes>
+  </test> <!-- Test-1(failed) -->
 </suite> <!-- Failed suite [Suite] -->
