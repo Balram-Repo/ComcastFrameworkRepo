@@ -6,7 +6,7 @@
 			class-name="com.comcast.crm.generic.listeners.ListenersImpl"></listener>
 	</listeners>
 	<test thread-count="2" name="Test-1">
-		<parameter name="browser" value="edge"></parameter>
+		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="com.comcast.crm.orgtest.CreateOrganizationTest" />
 		</classes>
