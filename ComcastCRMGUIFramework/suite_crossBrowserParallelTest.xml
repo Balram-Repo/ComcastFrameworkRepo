@@ -3,7 +3,7 @@
 <suite thread-count="2" parallel="tests" name="Suite">
 	<listeners>
 		<listener
-			class-name="com.comcast.crm.generic.listeners.ListenersImplementation"></listener>
+			class-name="com.comcast.crm.generic.listeners.ListenersImpl"></listener>
 	</listeners>
 	<test thread-count="2" name="Test-1">
 		<parameter name="browser" value="edge"></parameter>
