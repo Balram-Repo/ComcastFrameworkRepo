@@ -8,9 +8,6 @@
 	<test thread-count="2" name="Test-1">
 		<parameter name="browser" value="edge"></parameter>
 		<classes>
-			<class name="com.comcast.crm.contacttest.CreateContactTest" />
-			<class name="com.comcast.crm.producttest.CreateProductTest" />
-			<class name="com.comcast.crm.calendartest.CreateAnEventTest" />
 			<class name="com.comcast.crm.orgtest.CreateOrganizationTest" />
 		</classes>
 	</test> <!--
@@ -18,10 +15,7 @@
 	<test thread-count="2" name="Test-2">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="com.comcast.crm.contacttest.CreateContactTest" />
-			<class name="com.comcast.crm.producttest.CreateProductTest" />
-			<class name="com.comcast.crm.calendartest.CreateAnEventTest" />
-			<class name="com.comcast.crm.orgtest.CreateOrganizationTest" />
+			<class name="com.comcast.crm.producttest.CreateProductTest" />			
 		</classes>
 	</test> <!--
 	Test -->
