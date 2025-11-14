@@ -12,8 +12,6 @@
 			<class name="com.comcast.crm.producttest.CreateProductTest" />
 			<class name="com.comcast.crm.calendartest.CreateAnEventTest" />
 			<class name="com.comcast.crm.orgtest.CreateOrganizationTest" />
-			<class
-				name="com.comcast.crm.trouble_ticketstest.CreateTroubleTicketTest" />
 		</classes>
 	</test> <!--
 	Test -->
@@ -24,8 +22,6 @@
 			<class name="com.comcast.crm.producttest.CreateProductTest" />
 			<class name="com.comcast.crm.calendartest.CreateAnEventTest" />
 			<class name="com.comcast.crm.orgtest.CreateOrganizationTest" />
-			<class
-				name="com.comcast.crm.trouble_ticketstest.CreateTroubleTicketTest" />
 		</classes>
 	</test> <!--
 	Test -->
