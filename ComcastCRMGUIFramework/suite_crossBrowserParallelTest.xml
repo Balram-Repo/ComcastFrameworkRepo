@@ -10,8 +10,7 @@
 		<classes>
 			<class name="com.comcast.crm.orgtest.CreateOrganizationTest" />
 		</classes>
-	</test> <!--
-	Test -->
+	</test>
 	<test thread-count="2" name="Test-2">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
