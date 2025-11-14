@@ -42,8 +42,8 @@ public class BaseClass {
 	@BeforeClass(alwaysRun = true)
 	public void beforeClassConfig(@Optional("chrome") String browser) throws Exception {
 		System.out.println("=== Launch Browser ===");
-		String BROWSER = System.getProperty("browser", pUtil.getDataFromPropertyFile("browser"));
-				// browser;
+		String BROWSER = browser;
+				// System.getProperty("browser", pUtil.getDataFromPropertyFile("browser"));
 				// pUtil.getDataFromPropertyFile("browser");
 		switch (BROWSER) {
 		case "chrome":
