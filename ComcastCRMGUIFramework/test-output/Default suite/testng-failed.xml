@@ -7,9 +7,9 @@
         <methods>
           <include name="afterSuiteConfig"/>
           <include name="beforeMethodConfig"/>
-          <include name="afterClassConfig"/>
           <include name="afterMethodCongig"/>
-          <include name="createContactTest"/>
+          <include name="afterClassConfig"/>
+          <include name="createContactWithOrgTest"/>
           <include name="beforeClassConfig"/>
           <include name="beforeSuiteConfig"/>
         </methods>

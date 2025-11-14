@@ -4,19 +4,31 @@
   <listeners>
     <listener class-name="com.comcast.crm.generic.listeners.ListenersImpl"/>
   </listeners>
-  <test thread-count="2" parallel="tests" name="Test-2(failed)">
+  <test thread-count="2" parallel="tests" name="Test-1(failed)">
+    <parameter name="browser" value="edge"/>
     <classes>
-      <class name="com.comcast.crm.orgtest.CreateOrganizationTest">
+      <class name="com.comcast.crm.trouble_ticketstest.CreateTroubleTicketTest">
         <methods>
           <include name="afterSuiteConfig"/>
           <include name="beforeMethodConfig"/>
           <include name="afterClassConfig"/>
           <include name="afterMethodCongig"/>
+          <include name="createTroubleTicketTest"/>
           <include name="beforeClassConfig"/>
-          <include name="createOrgWithIndustryTest"/>
           <include name="beforeSuiteConfig"/>
         </methods>
-      </class> <!-- com.comcast.crm.orgtest.CreateOrganizationTest -->
+      </class> <!-- com.comcast.crm.trouble_ticketstest.CreateTroubleTicketTest -->
+      <class name="com.comcast.crm.contacttest.CreateContactTest">
+        <methods>
+          <include name="afterSuiteConfig"/>
+          <include name="beforeMethodConfig"/>
+          <include name="afterMethodCongig"/>
+          <include name="afterClassConfig"/>
+          <include name="createContactWithOrgTest"/>
+          <include name="beforeClassConfig"/>
+          <include name="beforeSuiteConfig"/>
+        </methods>
+      </class> <!-- com.comcast.crm.contacttest.CreateContactTest -->
     </classes>
-  </test> <!-- Test-2(failed) -->
+  </test> <!-- Test-1(failed) -->
 </suite> <!-- Failed suite [Suite] -->
